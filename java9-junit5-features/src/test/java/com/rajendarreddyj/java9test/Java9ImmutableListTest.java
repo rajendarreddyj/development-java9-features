@@ -1,4 +1,4 @@
-package com.rajendarreddyj.java9;
+package com.rajendarreddyj.java9test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

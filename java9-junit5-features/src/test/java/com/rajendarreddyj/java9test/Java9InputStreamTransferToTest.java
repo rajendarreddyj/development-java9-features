@@ -1,4 +1,4 @@
-package com.rajendarreddyj.java9;
+package com.rajendarreddyj.java9test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -17,8 +17,8 @@ import org.junit.jupiter.api.Test;
  */
 public class Java9InputStreamTransferToTest {
 
-    /* 
-        syntax of the InputStream.transferTo(OutputStream) method which reads all bytes from this input stream and writes the bytes 
+    /*
+        syntax of the InputStream.transferTo(OutputStream) method which reads all bytes from this input stream and writes the bytes
         to the given output stream in the order that they are read:
         public long transferTo(OutputStream out) throws IOException
         Parameters:
