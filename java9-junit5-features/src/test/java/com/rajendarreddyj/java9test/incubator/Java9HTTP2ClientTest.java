@@ -27,8 +27,8 @@ import jdk.incubator.http.HttpTimeoutException;
 public class Java9HTTP2ClientTest {
 
     /*
-      * In JDK 9, the module is called jdk.incubator.httpclient. 
-      * This incubator module will be replaced by java.httpclient in JDK 10. 
+      * In JDK 9, the module is called jdk.incubator.httpclient.
+      * This incubator module will be replaced by java.httpclient in JDK 10.
       * JDK 10 might bring breaking changes to the API.
      */
     @Test
