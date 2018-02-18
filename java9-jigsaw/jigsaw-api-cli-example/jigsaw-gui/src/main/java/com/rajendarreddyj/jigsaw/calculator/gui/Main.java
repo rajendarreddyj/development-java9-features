@@ -1,12 +1,20 @@
 package com.rajendarreddyj.jigsaw.calculator.gui;
 
+import java.util.ServiceLoader;
+
+import com.rajendarreddyj.jigsaw.calculator.api.Algorithm;
+
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
@@ -15,9 +23,6 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
-import com.rajendarreddyj.jigsaw.calculator.api.Algorithm;
-
-import java.util.ServiceLoader;
 
 /**
  * rajendarreddy.jagapathi
@@ -61,7 +66,7 @@ public class Main extends Application {
         algorithms.forEach(v -> {
             options.add(v);
         });
-        final ComboBox comboBox = new ComboBox(options);
+        final ComboBox<Algorithm> comboBox = new ComboBox<Algorithm>(options);
         grid.add(comboBox, 1, 2);
 
         // Define rendering of the list of values in ComboBox drop down.
