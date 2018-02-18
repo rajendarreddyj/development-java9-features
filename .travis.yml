@@ -18,7 +18,7 @@ matrix:
     - jdk: oraclejdk9
 
 script:
-   ./mvnw clean install -Dmaven.test.skip=true;
+   ./mvnw clean install;
 
 addons:
   sonarqube: true
@@ -27,7 +27,7 @@ addons:
       name: "rajendarreddyj/development-java"
     notification_email: rajendarreddyj@gmail.com
     build_command_prepend: "mvn clean"
-    build_command:   "./mvnw -DskipTests=true compile"
+    build_command:   "./mvnw compile"
     branch_pattern: coverity_scan
 
 notifications:
