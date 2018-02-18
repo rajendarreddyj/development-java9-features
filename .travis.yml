@@ -20,16 +20,6 @@ matrix:
 script:
    ./mvnw clean install;
 
-addons:
-  sonarqube: true
-  coverity_scan:
-    project:
-      name: "rajendarreddyj/development-java"
-    notification_email: rajendarreddyj@gmail.com
-    build_command_prepend: "mvn clean"
-    build_command:   "./mvnw compile"
-    branch_pattern: coverity_scan
-
 notifications:
   slack:
     on_success: never  # options: [always|never|change] default: always
