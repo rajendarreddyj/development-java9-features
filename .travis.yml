@@ -1,0 +1,37 @@
+language: java
+
+sudo: required
+
+# required for oraclejdk9
+dist: xenial
+
+jdk:
+  - oraclejdk9
+
+addons:
+  apt:
+    packages:
+      - oracle-java9-installer
+
+matrix:
+  allow_failures:
+    - jdk: oraclejdk9
+
+script:
+   ./mvnw clean install -Dmaven.test.skip=true;
+
+addons:
+  sonarqube: true
+  coverity_scan:
+    project:
+      name: "rajendarreddyj/development-java"
+    notification_email: rajendarreddyj@gmail.com
+    build_command_prepend: "mvn clean"
+    build_command:   "./mvnw -DskipTests=true compile"
+    branch_pattern: coverity_scan
+
+notifications:
+  slack:
+    on_success: never  # options: [always|never|change] default: always
+    on_failure: always # options: [always|never|change] default: always
+    on_start: never    # options: [always|never|change] default: always
