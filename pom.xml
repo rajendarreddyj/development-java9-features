@@ -107,5 +107,7 @@
   </build>
   <modules>
     <module>java9-junit5-features</module>
+    <module>java9-jigsaw</module>
+    <module>java9-jigsaw-gateway</module>
   </modules>
 </project>
