@@ -9,8 +9,8 @@
     <!-- Java version -->
     <java.version>9</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>1.9</maven.compiler.target>
-    <maven.compiler.source>1.9</maven.compiler.source>
+    <maven.compiler.target>9</maven.compiler.target>
+    <maven.compiler.source>9</maven.compiler.source>
     <junit.jupiter.version>5.0.3</junit.jupiter.version>
     <junit.platform.version>1.0.3</junit.platform.version>
     <junit.vintage.version>4.12.3</junit.vintage.version>

@@ -3,12 +3,15 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.rajendarreddyj</groupId>
-    <artifactId>java9-features</artifactId>
+    <artifactId>jigsaw-api-cli-example</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>java9-jigsaw</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-    <module>jigsaw-api-cli-example</module>
-  </modules>
+  <artifactId>jigsaw-subtract</artifactId>
+  <dependencies>
+    <dependency>
+      <groupId>com.rajendarreddyj</groupId>
+      <artifactId>jigsaw-api</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>
