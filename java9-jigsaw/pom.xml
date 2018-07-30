@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.rajendarreddyj</groupId>
-    <artifactId>java9-features</artifactId>
+    <artifactId>development-java9-features</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>java9-jigsaw</artifactId>

@@ -1,23 +1,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.rajendarreddyj</groupId>
-  <artifactId>java9-features</artifactId>
+  <parent>
+    <groupId>com.rajendarreddyj</groupId>
+    <artifactId>development-pom</artifactId>
+    <version>1.0</version>
+  </parent>  
+  <artifactId>development-java9-features</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
     <!-- Java version -->
     <java.version>9</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>9</maven.compiler.target>
-    <maven.compiler.source>9</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
     <junit.jupiter.version>5.0.3</junit.jupiter.version>
     <junit.platform.version>1.0.3</junit.platform.version>
     <junit.vintage.version>4.12.3</junit.vintage.version>
-    <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
-    <!-- latest version (2.20.1) does not work well with JUnit5 https://issues.apache.org/jira/browse/SUREFIRE-1206 -->
-    <maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
   </properties>
+  <!-- add GitHub rajendarreddyj maven-repo to repositories -->
+  <repositories>
+    <repository>
+      <id>github-maven-repo</id>
+      <url>https://github.com/rajendarreddyj/maven-repo/raw/master/</url>
+    </repository>
+  </repositories>   
   <dependencies>
     <dependency>
       <groupId>org.junit.platform</groupId>
@@ -110,4 +118,37 @@
     <module>java9-jigsaw</module>
     <module>java9-jigsaw-gateway</module>
   </modules>
+  <organization>
+    <url>https://rajendarreddyj.github.io/</url>
+    <name>rajendarreddyj</name>
+  </organization>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://raw.githubusercontent.com/rajendarreddyj/development-java9-features/master/LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <email>rajendarreddyj@gmail.com</email>
+      <name>Rajendarreddy Jagapathi</name>
+      <url>https://github.com/rajendarreddyj</url>
+      <id>rajendarreddyj</id>
+    </developer>
+  </developers>
+  <scm>
+    <url>https://github.com/rajendarreddyj/development-java9-features.git</url>
+    <developerConnection>scm:git:git@github.com:rajendarreddyj/development-java9-features.git</developerConnection>
+    <tag>HEAD</tag>
+    <connection>scm:git:git://github.com/rajendarreddyj/development-java9-features.git</connection>
+  </scm>
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/rajendarreddyj/development-java9-features/issues</url>
+  </issueManagement>
+  <ciManagement>
+    <url>https://travis-ci.org/rajendarreddyj/development-java9-features</url>
+    <system>Travis</system>
+  </ciManagement>    
 </project>
